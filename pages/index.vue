@@ -14,27 +14,29 @@
                     class="hover:bg-pink-500 hover:text-white uppercase shadow hover:shadow-lg active:translate-x-5 active:-translate-y-5">Blog</button>
             </div>
         </div>
-        <div class="text-pink-500 text-8xl font-montserrat font-extrabold">
+        <div class="text-pink-500 text-4xl font-montserrat font-extrabold">
             <template>
-                <TransitionGroup tag="div" enter-active-class="transition duration-200 ease-out"
-                    leave-active-class="transition duration-200 ease-out"
-                    enter-from-class="opacity-0 transform translate-x-[-50px]"
-                    enter-to-class="opacity-100 transform translate-x-0"
-                    leave-from-class="opacity-100 transform translate-x-0"
-                    leave-to-class="opacity-0 transform translate-x-[-50px]">
-                    <p v-if="tooltip === 'about'" key="about"
-                        class="fixed bottom-[50%] right-[10%] w-90 p-5 bg-white rounded-md">
-                        Just me
-                    </p>
-                    <p v-if="tooltip === 'social'" key="social"
-                        class="fixed bottom-[50%] right-[10%] w-90 p-5 bg-white rounded-md">
-                        All of me
-                    </p>
-                    <p v-if="tooltip === 'blog'" key="blog"
-                        class="fixed bottom-[50%] right-[10%] w-90 p-5 bg-white rounded-md">
-                        Me being me
-                    </p>
-                </TransitionGroup>
+                <div>
+                    <TransitionGroup tag="div" enter-active-class="transition duration-200 ease-out"
+                        leave-active-class="transition duration-200 ease-out"
+                        enter-from-class="opacity-0 transform translate-x-[-50px]"
+                        enter-to-class="opacity-100 transform translate-x-0"
+                        leave-from-class="opacity-100 transform translate-x-0"
+                        leave-to-class="opacity-0 transform translate-x-[-50px]">
+                        <p v-show="tooltip === 'about'" key="about"
+                            class="fixed bottom-0 left-0 w-90 shadow-md p-5 bg-white rounded-md">
+                            Just me
+                        </p>
+                        <p v-if="tooltip === 'social'" key="social"
+                            class="fixed bottom-0 left-0 w-90 shadow-md p-5 bg-white rounded-md">
+                            All of me
+                        </p>
+                        <p v-show="tooltip === 'blog'" key="blog"
+                            class="fixed bottom-0 left-0 w-90 shadow-md p-5 bg-white rounded-md">
+                            Me being me
+                        </p>
+                    </TransitionGroup>
+                </div>
             </template>
 
             <img class="fixed bottom-0 right-0 w-90 -z-10" src="/yotsuba.png">
