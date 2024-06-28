@@ -26,4 +26,14 @@ html {
     background-position: 1000% 1000%;
   }
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  transform: scale(0.8);
+  filter: blur(1rem);
+}
 </style>

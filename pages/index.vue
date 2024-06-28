@@ -43,7 +43,7 @@
     </div>
 </template>
 
-<script>
+<script setup>
 const tooltip = ref('');
 const showTooltip = async (type) => {
     tooltip.value = type;
