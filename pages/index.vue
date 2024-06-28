@@ -74,7 +74,7 @@ export default {
 html {
     position: absolute;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/pattern.png');
-    animation: backgroundAnim 5s infinite;
+    animation: backgroundAnim 5s linear infinite;
 }
 
 @keyframes backgroundAnim {
@@ -83,7 +83,7 @@ html {
     }
 
     to {
-        background-position: 100% 100%;
+        background-position: -100% -100%;
     }
 }
 </style>
