@@ -15,7 +15,6 @@
             </div>
         </div>
         <div class="text-pink-500 text-4xl font-montserrat font-extrabold">
-            <template>
                 <div>
                     <TransitionGroup tag="div" enter-active-class="transition duration-200 ease-out"
                         leave-active-class="transition duration-200 ease-out"
@@ -37,7 +36,6 @@
                         </p>
                     </TransitionGroup>
                 </div>
-            </template>
 
             <img class="fixed bottom-0 right-0 w-90 -z-10" src="/yotsuba.png">
         </div>
