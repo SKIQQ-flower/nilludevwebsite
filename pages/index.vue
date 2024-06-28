@@ -1,20 +1,74 @@
 <template>
-    <div class="h-dvh absolute flex flex-col items-center">
-        <div class="-rotate-[45deg] w-[180%] h-[170%] fixed right-[40%] -bottom-[160%] inline-flex justify-end bg-white">
+    <div class="h-dvh absolute w-dvw  flex flex-col items-center">
+        <div
+            class="-rotate-[45deg] w-[180%] h-[170%] fixed right-[40%] -bottom-[160%] inline-flex justify-end bg-white">
             <div
                 class="text-pink-500 h-fit w-92 gap-2 flex items-end flex-col *:p-5 *:transition-all px-5 pt-[15%] font-extrabold font-montserrat text-5xl">
-                <button ref="aboutBtn"
+                <button @mouseover="showTooltip('about')" @mouseout="hideTooltip" ref="aboutBtn"
                     class="hover:bg-pink-500 hover:text-white uppercase shadow hover:shadow-lg active:translate-x-5 active:-translate-y-5">About
                     me</button>
-                <button ref="socialBtn"
+                <button @mouseover="showTooltip('social')" @mouseout="hideTooltip" ref="socialBtn"
                     class="hover:bg-pink-500 hover:text-white uppercase shadow hover:shadow-lg active:translate-x-5 active:-translate-y-5">Social
                     Media</button>
-                <button ref="blogBtn"
+                <button @mouseover="showTooltip('blog')" @mouseout="hideTooltip" ref="blogBtn"
                     class="hover:bg-pink-500 hover:text-white uppercase shadow hover:shadow-lg active:translate-x-5 active:-translate-y-5">Blog</button>
             </div>
         </div>
+        <div class="text-pink-500 text-8xl font-montserrat font-extrabold">
+            <template>
+                <TransitionGroup tag="div" enter-active-class="transition duration-200 ease-out"
+                    leave-active-class="transition duration-200 ease-out"
+                    enter-from-class="opacity-0 transform translate-x-[-50px]"
+                    enter-to-class="opacity-100 transform translate-x-0"
+                    leave-from-class="opacity-100 transform translate-x-0"
+                    leave-to-class="opacity-0 transform translate-x-[-50px]">
+                    <p v-if="tooltip === 'about'" key="about"
+                        class="fixed bottom-[50%] right-[10%] w-90 p-5 bg-white rounded-md">
+                        Just me
+                    </p>
+                    <p v-if="tooltip === 'social'" key="social"
+                        class="fixed bottom-[50%] right-[10%] w-90 p-5 bg-white rounded-md">
+                        All of me
+                    </p>
+                    <p v-if="tooltip === 'blog'" key="blog"
+                        class="fixed bottom-[50%] right-[10%] w-90 p-5 bg-white rounded-md">
+                        Me being me
+                    </p>
+                </TransitionGroup>
+            </template>
+
+            <img class="fixed bottom-0 right-0 w-90 -z-10" src="/yotsuba.png">
+        </div>
     </div>
 </template>
+
+<script>
+import { ref, computed, nextTick } from 'vue';
+export default {
+    setup() {
+        const tooltip = ref('');
+        const tooltipStyles = ref({});
+        const aboutBtn = ref(null);
+        const socialBtn = ref(null);
+        const blogBtn = ref(null);
+        const showTooltip = async (type) => {
+            tooltip.value = type;
+        };
+        const hideTooltip = () => {
+            tooltip.value = '';
+        };
+        return {
+            tooltip,
+            tooltipStyles,
+            aboutBtn,
+            socialBtn,
+            blogBtn,
+            showTooltip,
+            hideTooltip,
+        };
+    },
+};
+</script>
 
 <style>
 html {
@@ -25,10 +79,11 @@ html {
 
 @keyframes backgroundAnim {
     from {
-            background-position: 0 0;
+        background-position: 0 0;
     }
+
     to {
-            background-position: 100% 100%;
+        background-position: 100% 100%;
     }
 }
 </style>
