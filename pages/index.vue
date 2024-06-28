@@ -1,9 +1,9 @@
 <template>
-    <div class="h-dvh absolute w-dvw  flex flex-col items-center">
+    <div class="h-dvh absolute w-dvw flex flex-col items-center">
         <div
-            class="-rotate-[45deg] w-[180%] h-[170%] fixed right-[40%] -bottom-[160%] inline-flex justify-end bg-white">
+            class="md:-rotate-[45deg] md:w-[180vw] md:h-[170vw] md:rounded-none rounded-2xl fixed md:right-[15%] md:top-[70%] inline-flex md:justify-end justify-center bg-white">
             <div
-                class="text-pink-500 h-fit w-92 gap-2 flex items-end flex-col *:p-5 *:transition-all px-5 pt-[15%] font-extrabold font-montserrat text-5xl">
+                class="text-pink-500 p-4 h-fit w-92 gap-2 flex md:items-end items-center flex-col *:p-5 *:md:rounded-none *:rounded-xl *:transition-all md:px-5 md:pt-[15%] font-extrabold font-montserrat text-5xl">
                 <button @mouseover="showTooltip('about')" @mouseout="hideTooltip" ref="aboutBtn"
                     class="hover:bg-pink-500 hover:text-white uppercase shadow hover:shadow-lg active:translate-x-5 active:-translate-y-5">About
                     me</button>
