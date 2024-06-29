@@ -17,7 +17,7 @@
                     class="hover:bg-pink-500 hover:text-white uppercase shadow hover:shadow-lg active:translate-x-5 active:-translate-y-5">Blog</button>
             </div>
         </div>
-        <div class="text-pink-500 text-4xl font-montserrat font-extrabold">
+        <div class="text-pink-500 md:visible hidden text-4xl font-montserrat font-extrabold">
             <div>
                 <TransitionGroup tag="div" enter-active-class="transition duration-200 ease-out"
                     leave-active-class="transition duration-200 ease-out"
