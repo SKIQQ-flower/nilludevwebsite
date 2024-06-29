@@ -7,7 +7,7 @@
             class="lg:-rotate-[45deg] lg:w-[180vw] lg:h-[170vw] lg:rounded-none rounded-2xl fixed xl:right-[15%] xl:top-[70%] lg:right-[0%] lg:top-[40%] inline-flex lg:justify-end justify-center bg-white">
             <div
                 class="text-pink-500 p-4 h-fit w-92 gap-2 flex lg:items-end items-center flex-col *:p-5 *:lg:rounded-none *:rounded-xl *:transition-all lg:px-5 lg:pt-[15%] font-extrabold font-montserrat text-5xl">
-                <NuxtLink to="/about" @mouseover="showTooltip('about')" @mouseout="hideTooltip" ref="aboutBtn"
+                <NuxtLink to="/about-me" @mouseover="showTooltip('about')" @mouseout="hideTooltip" ref="aboutBtn"
                     class="hover:bg-pink-500 hover:text-white uppercase shadow hover:shadow-lg active:translate-x-5 active:-translate-y-5">About
                     me</NuxtLink>
                 <button @mouseover="showTooltip('social')" @mouseout="hideTooltip" ref="socialBtn"
@@ -25,7 +25,7 @@
                     enter-to-class="opacity-100 transform translate-x-0"
                     leave-from-class="opacity-100 transform translate-x-0"
                     leave-to-class="opacity-0 transform translate-x-[-50px]">
-                    <p v-show="tooltip === 'about'" key="about"
+                    <p v-if="tooltip === 'about'" key="about"
                         class="fixed bottom-0 left-0 w-90 shadow-lg p-5 bg-white rounded-lg">
                         Just me
                     </p>
@@ -33,7 +33,7 @@
                         class="fixed bottom-0 left-0 w-90 shadow-lg p-5 bg-white rounded-lg">
                         All of me
                     </p>
-                    <p v-show="tooltip === 'blog'" key="blog"
+                    <p v-if="tooltip === 'blog'" key="blog"
                         class="fixed bottom-0 left-0 w-90 shadow-lg p-5 bg-white rounded-lg">
                         Me being me
                     </p>

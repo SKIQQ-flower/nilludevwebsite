@@ -3,7 +3,7 @@
   <Link rel="preconnect" href="https://fonts.gstatic.com" />
   <Link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
-  <NuxtPage />
+  <NuxtPage/>
 </template>
 
 <style>
@@ -25,15 +25,5 @@ html {
   to {
     background-position: 1000% 1000%;
   }
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.4s;
-}
-.page-enter-from,
-.page-leave-to {
-  transform: scale(0.8);
-  filter: blur(1rem);
 }
 </style>
