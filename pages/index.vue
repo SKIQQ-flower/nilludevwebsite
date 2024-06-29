@@ -6,7 +6,7 @@
         <div
             class="lg:-rotate-[45deg] lg:w-[180vw] lg:h-[170vw] lg:rounded-none rounded-2xl fixed xl:right-[15%] xl:top-[70%] lg:right-[0%] lg:top-[40%] inline-flex lg:justify-end justify-center bg-white">
             <div
-                class="text-pink-500 p-4 h-fit w-92 gap-2 flex lg:items-end items-center flex-col *:p-5 *:lg:rounded-none *:rounded-xl *:transition-all lg:px-5 lg:pt-[15%] font-extrabold font-montserrat text-5xl">
+                class="text-pink-500 p-4 h-fit w-92 gap-2 flex lg:items-end items-center flex-col *:p-5 *:lg:rounded-none *:rounded-xl *:transition-all lg:px-5 lg:pt-[15%] font-extrabold font-montserrat md:text-5xl">
                 <NuxtLink to="/about-me" @mouseover="showTooltip('about')" @mouseout="hideTooltip" ref="aboutBtn"
                     class="hover:bg-pink-500 hover:text-white uppercase shadow hover:shadow-lg active:translate-x-5 active:-translate-y-5">About
                     me</NuxtLink>
