@@ -11,6 +11,18 @@
   @apply flex flex-col
 }
 
+.page-enter-active,
+.page-leave-active {
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(0.8)
+}
+
 html {
   @apply w-dvw h-dvh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/pattern.png');
