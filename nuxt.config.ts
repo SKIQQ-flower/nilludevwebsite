@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/icon"],
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+
+  compatibilityDate: "2024-08-24",
 })

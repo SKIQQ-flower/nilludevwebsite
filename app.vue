@@ -11,6 +11,16 @@
   @apply flex flex-col
 }
 
+@font-face {
+  font-family: Daydream;
+  src: url(Daydream.ttf);
+}
+
+@font-face {
+  font-family: Minecraft;
+  src: url(Minecraft.ttf);
+}
+
 .page-enter-active,
 .page-leave-active {
   overflow: hidden;
@@ -25,7 +35,7 @@
 
 html {
   @apply w-dvw h-dvh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/pattern.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url('/pattern.png');
   animation: backgroundAnim 500s linear infinite;
 }
 

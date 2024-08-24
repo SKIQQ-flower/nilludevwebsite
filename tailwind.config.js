@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       "fontFamily": {
-        'montserrat': ["Montserrat", 'sans-serif']
+        'montserrat': ["Montserrat", 'sans-serif'],
+        'daydream': ["Daydream", "Comic Sans MS", "Cursive"],
+        'mc': ["Minecraft", "Comic Sans MS", "Cursive"],
       }
     },
   },
