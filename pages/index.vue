@@ -2,22 +2,22 @@
     <div
         class="h-dvh w-dvw flex flex-col p-5">
         <h1 class="font-daydream w-full text-4xl text-white mb-6 text-center">NilluDev Website</h1>
-        <div class="flex flex-row gap-5 justify-around w-full">
+        <div class="flex md:flex-row flex-col gap-5 justify-around w-full">
             <div class="flex flex-col items-center">
-                <p class="npatch-angled w-full text-nowrap py-4 font-mc text-[#ffbfc6] text-3xl px-9">
+                <p class="npatch-angled w-full text-nowrap py-4 font-mc text-[#ffbfc6] text-2xl px-9">
                     Nillu's Website Portal
                 </p>
                 <div class="npatch-window flex-col flex -mt-[1.5 bg-[#2c1e31] w-full">
                     <div
                     class="text-pink-500 w-full p-4 justify-center gap-2 relative flex items-center flex-col *:p-5 *:lg:rounded-none *:rounded-xl *:transition-colors lg:px-5 font-mc lg:text-4xl text-3xl">
                         <NuxtLink to="/about-me" ref="aboutBtn"
-                            class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center active:translate-x-5 active:-translate-y-5">About
+                            class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center">About
                             me</NuxtLink>
                         <button ref="socialBtn"
-                            class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center active:translate-x-5 active:-translate-y-5">Social
+                            class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center">Social
                             Media</button>
                         <button ref="blogBtn"
-                            class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center active:translate-x-5 active:-translate-y-5">Blog</button>
+                            class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center">Blog</button>
                         </div>
                     </div>
             </div>
