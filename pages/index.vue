@@ -17,11 +17,11 @@
                             class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center">
                             About me
                         </NuxtLink>
-                        <button
-                            :class="{'active-link': $route.path === '/social'}"
+                        <NuxtLink to="/arts" 
+                            :class="{'active-link': $route.path === '/arts'}"
                             class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center">
-                            Social Media
-                        </button>
+                            Arts
+                        </NuxtLink>
                         <button
                             :class="{'active-link': $route.path === '/blog'}"
                             class="hover:bg-[#ec273f] text-nowrap w-full btn-heart text-white/60 bg-[#6b2643] npatch-btn hover:text-white shadow hover:shadow-lg text-center">
@@ -43,7 +43,7 @@
 
 <script setup>
 const portalVisible = ref(true);
-const isMediumOrLarger = useMediaQuery('(min-width: 768px)'); // Detecta telas a partir de 768px
+const isMediumOrLarger = useMediaQuery('(min-width: 768px)');
 
 const togglePortal = () => {
     portalVisible.value = !portalVisible.value;
@@ -83,6 +83,10 @@ watch(isMediumOrLarger, (newVal) => {
     display: inline-block;
 }
 
+.btn-heart {
+    position: relative;
+}
+
 .label-heart::before {
     content: "";
     width: 30px;
@@ -90,7 +94,7 @@ watch(isMediumOrLarger, (newVal) => {
     background: url("/heart.png");
     background-repeat: no-repeat;
     background-size: 30px;
-    left: -15px;
+    left: -10px;
     position: absolute;
     display: inline-block;
 }
