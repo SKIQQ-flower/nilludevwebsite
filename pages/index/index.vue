@@ -30,6 +30,8 @@
 </template>
 
 <script setup>
+const showTooltip = ref(false);
+
 const copyUsername = () => {
     navigator.clipboard.writeText('@NilluDev').then(() => {
         showTooltip.value = true;
