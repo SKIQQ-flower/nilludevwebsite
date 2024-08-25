@@ -3,23 +3,110 @@
   <Link rel="preconnect" href="https://fonts.gstatic.com" />
   <Link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
-  <NuxtPage/>
-</template>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <NuxtPage/>
+  </template>
 
 <style>
+@font-face {
+  font-family: Daydream;
+  src: url("/Daydream.ttf");
+}
+
 #__nuxt {
   @apply flex flex-col
 }
 
-@font-face {
-  font-family: Daydream;
-  src: url(Daydream.ttf);
+
+.npatch-window {
+    border-image: url("/npatch window.png") 2 fill repeat;
+    image-rendering: pixelated;
+    border-image-width: 9px;
 }
 
-@font-face {
-  font-family: Minecraft;
-  src: url(Minecraft.ttf);
+.active-link {
+    background-color: #ec273f;
+    color: white;
 }
+
+
+.label-heart::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("/heart.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    right: 5px;
+    position: absolute;
+    display: inline-block;
+}
+
+.btn-heart {
+    position: relative;
+}
+
+.label-heart::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("/heart.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    left: -10px;
+    position: absolute;
+    display: inline-block;
+}
+
+.btn-heart:hover:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("/heart.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    left: -10px;
+    position: absolute;
+    display: inline-block;
+    animation: initOpacity 100ms
+}
+
+@keyframes initOpacity {
+    from {
+        opacity: 0;
+        background-size: 20px;
+    }
+    to {
+        background-size: 30px;
+        opacity: 1;
+    }
+}
+
+.btn-heart:hover:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("/heart.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    right: -10px;
+    position: absolute;
+    display: inline-block;
+    animation: initOpacity 100ms
+}
+
+.npatch-btn {
+    border-image: url("/npatch btn.png") 2 fill repeat;
+    image-rendering: pixelated;
+    border-image-width: 9px;
+}
+
+.npatch-angled {
+    border-image: url("/angled header.png") 4 5 fill repeat;
+    image-rendering: pixelated;
+    border-image-width: 30px;
+}
+
 
 .page-enter-active,
 .page-leave-active {
