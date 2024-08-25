@@ -1,13 +1,13 @@
 <template>
     <div>
-        <ContentDoc class="w-1/3 flex" v-if="$route.params.id" :path="'/' + $route.params.id">
+        <ContentDoc class="w-full flex" v-if="$route.params.id" :path="'/' + $route.params.id">
             <template v-slot="{ doc }">
                 <div class="flex flex-col w-full items-center">
-                    <p class="npatch-angled text-nowrap py-4 font-pixel text-[#ffbfc6] text-3xl px-9">
+                    <p class="npatch-angled w-full text-nowrap py-4 font-pixel text-[#ffbfc6] text-3xl px-9">
                         {{ doc.title }}
                     </p>
                     <div
-                        class="npatch-window break-words whitespace-normal flex flex-row flex-wrap text-white relative bg-[#2c1e31] p-5 text-1xl">
+                        class="npatch-window w-full break-words whitespace-normal flex flex-row flex-wrap text-white relative bg-[#2c1e31] p-5 text-1xl">
                         <ContentRenderer :value="doc" />
                     </div>
                 </div>
